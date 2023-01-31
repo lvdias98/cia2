@@ -1,12 +1,12 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" (click)="copy()">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Test
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" (click)="copy()">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Blank</ion-title>
@@ -14,7 +14,21 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <strong (click)="copy()">Test print application</strong>
+    <p>1 - Fill in mac address</p>
+    <p>2 - Click connect BT</p>
+    <p>3 - Click print test</p>
+
+    <div class="input">
+      <ion-item>
+        <ion-label position="floating">MAC Address (Ex: 40192050237B)</ion-label>
+        <ion-input placeholder="Enter text" [(ngModel)]="mac"></ion-input>
+      </ion-item>
+    </div>
+
+    <div class="buttons">
+      <ion-button expand="block" (click)="connect()" [disabled]="mac.length===0">Connect BT</ion-button>
+      <ion-button expand="block" (click)="print()" [disabled]="!connection">Print Test</ion-button>
+    </div>
   </div>
 </ion-content>
