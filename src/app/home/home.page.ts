@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Platform, LoadingController } from '@ionic/angular';
 
 declare var SewooPrintApplay:any;
+declare var navigator:any;
 
 @Component({
   selector: 'app-home',

@@ -1,0 +1,55 @@
+repositories  {
+    jcenter()
+    // mavenLocal()
+    google()
+    mavenCentral()
+    // maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    // implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+    // implementation "androidx.annotation:annotation:1.1.0"
+    // implementation "androidx.core:core:1.3.2"
+    // implementation 'androidx.appcompat:appcompat:1.2.0'
+    // implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    // implementation 'androidx.work:work-runtime:2.4.0'
+    // implementation 'com.google.android.material:material:1.2.1'
+    // implementation 'androidx.navigation:navigation-fragment-ktx:2.3.2'
+    // implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
+    // implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+
+    // implementation 'com.android.support:multidex:1.0.3'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:design:+'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation files ('src/main/libs/Sewoo_Android_1111.jar')
+    // implementation files('libs\\Sewoo_Android_1111.jar')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+android {
+    // defaultConfig {
+    //     multiDexEnabled true
+    // }
+    // packagingOptions {
+    //     exclude 'META-INF/NOTICE'
+    //     exclude 'META-INF/LICENSE'
+    // }
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.mobile.app.zpl"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            // proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
